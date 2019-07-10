@@ -24,7 +24,7 @@ export default class App extends Component {
       <Provider store={Store}>
         <PersistGate persistor={persistor} loading={this.renderLoading()}>
           <View style={{justifyContent: 'center', flex: 1, alignItems: 'center', padding: 30}}>
-            <RobotoBold style={{alignSelf: 'center', textAlign: 'center'}}>
+            <RobotoBold style={{alignSelf: 'center', textAlign: 'center', color: PRI_COLOR}}>
               Welcome to E-Practice
             </RobotoBold>
             <RobotoRegular style={{alignSelf: 'center', textAlign: 'center'}}>
