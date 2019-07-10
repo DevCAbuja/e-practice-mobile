@@ -1,7 +1,7 @@
 import { 
   LOGIN,
   LOGOUT
- } from './../../utils/constants';
+ } from '../../utils/constants/redux';
 
 export const login = payload => ({
   type: LOGIN,

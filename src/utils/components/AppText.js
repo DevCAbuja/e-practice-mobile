@@ -1,50 +1,22 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text } from 'react-native';
+import PropTypes from 'prop-types';
 
-export const PoppinsBold = (props) => {
-  return (
-    <Text style={{ fontFamily: 'PoppinsBold', fontSize: 14, color: '#353535', ...props.style, }}>
+
+
+const AppText = (props) => {
+
+  return ( 
+    <Text style={{ fontFamily: `${props.family}${props.variant}`, fontSize: 14, color: '#353535', ...props.style, }}>
       {props.children}
     </Text>
   )
 }
 
-export const PoppinsRegular = (props) => {
-  return (
-    <Text style={{ fontFamily: 'PoppinsRegular', fontSize: 14, color: '#353535', ...props.style, }}>
-      {props.children}
-    </Text>
-  )
+AppText.propTypes = {
+  style: Text.propTypes.style,
+  variant: PropTypes.oneOf(['Bold', 'Light', 'Regular']).isRequired,
+  family: PropTypes.oneOf(['Roboto',  'Poppins']).isRequired
 }
 
-export const PoppinsLight = (props) => {
-  return (
-    <Text style={{ fontFamily: 'PoppinsLight', fontSize: 14, color: '#353535', ...props.style, }}>
-      {props.children}
-    </Text>
-  )
-}
-
-export const RobotoBold = (props) => {
-  return (
-    <Text style={{ fontFamily: 'RobotoBold', fontSize: 14, color: '#353535', ...props.style, }}>
-      {props.children}
-    </Text>
-  )
-}
-
-export const RobotoRegular = (props) => {
-  return (
-    <Text style={{ fontFamily: 'RobotoRegular', fontSize: 14, color: '#353535', ...props.style, }}>
-      {props.children}
-    </Text>
-  )
-}
-
-export const RobotoLight = (props) => {
-  return (
-    <Text style={{ fontFamily: 'RobotoLight', fontSize: 14, color: '#353535', ...props.style, }}>
-      {props.children}
-    </Text>
-  )
-}
+export default AppText;

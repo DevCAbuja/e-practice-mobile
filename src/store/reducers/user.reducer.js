@@ -1,5 +1,10 @@
-import InitialState from "../initialState";
-import { LOGIN, LOGOUT } from './../../utils/constants';
+import { LOGIN, LOGOUT } from '../../utils/constants/redux';
+
+const InitialState = {
+  user: {},
+  isAuthenticated: false,
+  token: null
+};
 
 const User = (state = InitialState, action) => {
   switch (action.type) {
