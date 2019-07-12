@@ -1,0 +1,1 @@
+export const PRI_COLOR = '#17a4d6';
